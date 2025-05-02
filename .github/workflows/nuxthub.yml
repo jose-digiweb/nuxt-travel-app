@@ -30,6 +30,9 @@ jobs:
       - name: Ensure NuxtHub module is installed
         run: pnpx nuxthub@latest ensure
 
+      - name: Run linter
+        run: pnpm lint
+
       - name: Build application
         run: pnpm build
 
