@@ -16,6 +16,11 @@
       "lineWidth": 100
     }
   },
+  "css": {
+    "formatter": {
+      "enabled": true
+    }
+  },
   "linter": {
     "rules": {
       "nursery": {
@@ -45,13 +50,12 @@
     }
   },
   "files": {
-    "include": ["*.vue", "*.json"],
+    "include": ["*.vue", "*.json", "*.css"],
     "ignore": [
       "**/node_modules",
       "**/.git",
       "**/.github",
       "**/.vscode",
-      "**/.next",
       "**/dist",
       "**/build",
       "**/coverage",
