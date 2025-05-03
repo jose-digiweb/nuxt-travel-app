@@ -7,10 +7,7 @@
         <div class="navbar-end">
             <AppThemeColor />
 
-            <NuxtLink to="/login" class="btn btn-accent">
-                <span>Sign in</span>
-                <Icon name="tabler:brand-github" class="text-lg" />
-            </NuxtLink>
+            <AuthLoginButton />
         </div>
     </div>
 </template>

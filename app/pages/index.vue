@@ -9,10 +9,8 @@
           Keep track of your travels and manage your itineraries. It's easy and
           intuitive. Add your travels, manage your itineraries, and stay organized.
         </p>
-        <NuxtLink to="/login" class="btn btn-accent">
-          <span>Sign in</span>
-          <Icon name="tabler:brand-github" class="text-lg" />
-        </NuxtLink>
+
+        <AuthLoginButton />
       </div>
     </div>
   </div>
