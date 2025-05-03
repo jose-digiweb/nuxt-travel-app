@@ -8,6 +8,9 @@ jobs:
     environment:
       name: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
       url: ${{ steps.deploy.outputs.deployment-url }}
+    env:
+      TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+      TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
     permissions:
       contents: read
       id-token: write
