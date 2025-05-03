@@ -1,3 +1,5 @@
+import './lib/env'
+
 // Dependencies
 import tailwindcss from "@tailwindcss/vite";
 
