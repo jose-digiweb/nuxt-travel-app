@@ -18,7 +18,7 @@ export const auth = betterAuth({
     },
   },
   hooks: {
-    // biome-ignore lint/suspicious/useAwait: <skip>
+    // biome-ignore lint/suspicious/useAwait: <ass>
     after: createAuthMiddleware(async (ctx) => {
       if (ctx.path === '/get-session') {
         if (!ctx.context.session) {
