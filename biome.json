@@ -21,6 +21,12 @@
       "nursery": {
         "useSortedClasses": "warn"
       },
+      "correctness": {
+        "noUndeclaredDependencies": "off",
+        "noUndeclaredVariables": "off",
+        "useHookAtTopLevel": "off",
+        "noUnusedVariables": "off"
+      },
       "a11y": {
         "useButtonType": "off",
         "noSvgWithoutTitle": "off"

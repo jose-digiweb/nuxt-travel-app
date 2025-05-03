@@ -19,7 +19,8 @@
     "source.organizeImports.biome": "explicit"
   },
   "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.gotoLocation.multipleDefinitions": "goto"
   },
   "editor.defaultFormatter": "biomejs.biome",
   "editor.formatOnPaste": true,

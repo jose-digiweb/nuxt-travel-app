@@ -2,7 +2,11 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: ['@nuxthub/core', '@nuxt/icon'],
+  modules: [
+    '@nuxthub/core',
+    '@nuxt/icon',
+    '@nuxtjs/color-mode'
+  ],
 
   css: ['~/assets/css/main.css'],
 
@@ -16,6 +20,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       tailwindcss()
-    ]
+    ],
+  },
+  colorMode: {
+    dataValue: 'theme'
   }
 })
