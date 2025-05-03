@@ -24,5 +24,10 @@ export default defineNuxtConfig({
   },
   colorMode: {
     dataValue: 'theme'
+  },
+  nitro: {
+    experimental: {
+      openAPI: true
+    }
   }
 })
