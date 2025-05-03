@@ -32,7 +32,7 @@
         "noSvgWithoutTitle": "off"
       },
       "complexity": {
-        "noForEach": "warn",
+        "noForEach": "off",
         "noExcessiveCognitiveComplexity": {
           "level": "warn",
           "options": {
@@ -51,7 +51,7 @@
     }
   },
   "files": {
-    "include": ["*.vue", "*.json"],
+    "include": ["./**/*.vue", "*.json", "./**/*.ts"],
     "ignore": [
       "**/node_modules",
       "**/.git",
@@ -62,7 +62,8 @@
       "**/coverage",
       "**/.cache",
       "**/*/sanity.types.ts",
-      "**/*/sanity-typegen.json"
+      "**/*/sanity-typegen.json",
+      "./lib/db/migrations"
     ]
   }
 }

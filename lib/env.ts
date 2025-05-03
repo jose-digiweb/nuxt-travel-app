@@ -1,10 +1,11 @@
-import { z } from "zod";
-import { tryParseEnvZod } from "./tryParseEnvZod";
+import { z } from 'zod'
+import { tryParseEnvZod } from './tryParseEnvZod'
 
 const EnvSchema = z.object({
-    NODE_ENV: z.enum(["development", "production"]),
+  NODE_ENV: z.enum(['development', 'production']),
+  TURSO_DATABASE_URL: z.string(),
+  TURSO_AUTH_TOKEN: z.string(),
 })
-
 
 export type EnvSchemaType = z.infer<typeof EnvSchema>
 

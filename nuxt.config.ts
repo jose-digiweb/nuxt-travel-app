@@ -1,14 +1,10 @@
 import './lib/env'
 
 // Dependencies
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  modules: [
-    '@nuxthub/core',
-    '@nuxt/icon',
-    '@nuxtjs/color-mode'
-  ],
+  modules: ['@nuxthub/core', '@nuxt/icon', '@nuxtjs/color-mode'],
 
   css: ['~/assets/css/main.css'],
 
@@ -20,16 +16,14 @@ export default defineNuxtConfig({
   hub: {},
 
   vite: {
-    plugins: [
-      tailwindcss()
-    ],
+    plugins: [tailwindcss()],
   },
   colorMode: {
-    dataValue: 'theme'
+    dataValue: 'theme',
   },
   nitro: {
     experimental: {
-      openAPI: true
-    }
-  }
+      openAPI: true,
+    },
+  },
 })
