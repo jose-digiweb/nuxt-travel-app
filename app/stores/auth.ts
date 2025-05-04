@@ -1,11 +1,17 @@
 import { authClient } from '../lib/authClient'
 
 export const useAuthStore = defineStore('useAuthStore', () => {
-  const session = authClient.useSession()
+  const session = ref<Awaited<ReturnType<typeof authClient.useSession>> | null>(null)
 
-  const user = computed(() => session.value.data?.user)
+  const init = async () => {
+    const data = await authClient.useSession(useFetch)
 
-  const loading = computed(() => session.value.isPending || session.value.isRefetching)
+    session.value = data
+  }
+
+  const user = computed(() => session?.value?.data?.user)
+
+  const loading = computed(() => session?.value?.isPending)
 
   const signIn = async () => {
     await authClient.signIn.social({
@@ -21,6 +27,7 @@ export const useAuthStore = defineStore('useAuthStore', () => {
   }
 
   return {
+    init,
     user,
     signIn,
     signOut,
