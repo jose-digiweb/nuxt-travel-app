@@ -9,6 +9,7 @@ const EnvSchema = z.object({
   BETTER_AUTH_URL: z.string(),
   AUTH_GITHUB_CLIENT_ID: z.string(),
   AUTH_GITHUB_CLIENT_SECRET: z.string(),
+  NUXT_HUB_PROJECT_KEY: z.string(),
 })
 
 export type EnvSchemaType = z.infer<typeof EnvSchema>
