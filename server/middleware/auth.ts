@@ -1,8 +1,11 @@
-import 'dotenv/config'
+import { auth } from '../../app/lib/auth'
 
-import env from '../../app/lib/env'
+export default defineEventHandler(async (event) => {
+  const session = await auth.api.getSession({
+    headers: event.headers,
+  })
 
-export default defineEventHandler(() => {
-  const envv = env.AUTH_GITHUB_CLIENT_ID
-  console.log('Middleware ENVVVV ===>> ', envv)
+  if (!session?.user && event.path.startsWith('/dashboard')) {
+    await sendRedirect(event, '/', 302)
+  }
 })
