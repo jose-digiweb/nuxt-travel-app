@@ -5,7 +5,7 @@ await auth.init()
 
 <template>
   <div class="flex min-h-dvh flex-col">
-    <main>
+    <main class="flex-1 flex flex-col">
       <AppNavBar />
 
       <slot />

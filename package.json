@@ -47,11 +47,6 @@
   },
   "packageManager": "pnpm@10.9.0",
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild",
-      "sharp",
-      "workerd"
-    ]
+    "onlyBuiltDependencies": ["@parcel/watcher", "esbuild", "sharp", "workerd"]
   }
 }
