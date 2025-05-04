@@ -1,4 +1,6 @@
+import env from '../../app/lib/env'
+
 export default defineEventHandler(() => {
-  const env = process.env.AUTH_GITHUB_CLIENT_ID
-  console.log('Middleware ENV ', env)
+  const envv = env.AUTH_GITHUB_CLIENT_ID
+  console.log('Middleware ENVVVV ===>> ', envv)
 })
