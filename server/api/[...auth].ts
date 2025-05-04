@@ -1,7 +1,7 @@
 import { auth } from '../../app/lib/auth'
+import env from '../../app/lib/env'
 
 export default defineEventHandler((event) => {
-  const env = process.env.AUTH_GITHUB_CLIENT_ID
-  console.log('EBV ==>> ', env)
+  console.log('EBV ==>> ', env.AUTH_GITHUB_CLIENT_ID)
   return auth.handler(toWebRequest(event))
 })
