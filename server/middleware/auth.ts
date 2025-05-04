@@ -1,3 +1,5 @@
+import 'dotenv/config'
+
 import env from '../../app/lib/env'
 
 export default defineEventHandler(() => {
