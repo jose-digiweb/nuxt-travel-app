@@ -1,6 +1,4 @@
-import { createAuthClient } from 'better-auth/vue'
-
-const authClient = createAuthClient()
+import { authClient } from '../lib/authClient'
 
 export const useAuthStore = defineStore('useAuthStore', () => {
   const session = authClient.useSession()
