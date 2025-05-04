@@ -1,4 +1,4 @@
-import './lib/env'
+import './app/lib/env'
 
 // Dependencies
 import tailwindcss from '@tailwindcss/vite'
