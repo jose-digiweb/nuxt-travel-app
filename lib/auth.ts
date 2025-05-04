@@ -2,6 +2,7 @@ import { betterAuth } from 'better-auth'
 import { drizzleAdapter } from 'better-auth/adapters/drizzle'
 import { createAuthMiddleware } from 'better-auth/plugins'
 import db from './db'
+import env from './env'
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -12,8 +13,8 @@ export const auth = betterAuth({
   },
   socialProviders: {
     github: {
-      clientId: process.env.AUTH_GITHUB_CLIENT_ID || '',
-      clientSecret: process.env.AUTH_GITHUB_CLIENT_SECRET || '',
+      clientId: env.AUTH_GITHUB_CLIENT_ID,
+      clientSecret: env.AUTH_GITHUB_CLIENT_SECRET,
     },
   },
   hooks: {

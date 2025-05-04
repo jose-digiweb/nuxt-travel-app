@@ -1,3 +1,5 @@
+import './lib/env'
+
 // Dependencies
 import tailwindcss from '@tailwindcss/vite'
 
@@ -24,4 +26,6 @@ export default defineNuxtConfig({
       openAPI: true,
     },
   },
+
+  runtimeConfig: {},
 })
