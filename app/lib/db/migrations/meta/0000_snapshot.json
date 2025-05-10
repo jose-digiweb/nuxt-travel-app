@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "026aeddc-5504-467f-a3dd-41fba38f5cf5",
+  "id": "31a3fbb2-5846-4c6a-8199-3ae1dae2c8eb",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "location": {
@@ -49,15 +49,15 @@
           "notNull": true,
           "autoincrement": false
         },
-        "create_app": {
-          "name": "create_app",
+        "created_at": {
+          "name": "created_at",
           "type": "integer",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
-        "update_at": {
-          "name": "update_at",
+        "updated_at": {
+          "name": "updated_at",
           "type": "integer",
           "primaryKey": false,
           "notNull": true,

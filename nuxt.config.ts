@@ -4,7 +4,14 @@ import './app/lib/env'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  modules: ['@nuxthub/core', '@nuxt/icon', '@nuxtjs/color-mode', '@pinia/nuxt'],
+  modules: [
+    '@nuxt/icon',
+    '@pinia/nuxt',
+    '@nuxthub/core',
+    '@nuxtjs/color-mode',
+    '@vee-validate/nuxt',
+    '@formkit/auto-animate/nuxt',
+  ],
 
   css: ['~/assets/css/main.css'],
 

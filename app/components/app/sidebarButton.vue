@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  label: string
-  icon: string
-  to?: string
-  iconOnly?: boolean
+    label: string
+    icon: string
+    to?: string
+    iconOnly?: boolean
 }>()
 
 const route = useRoute()
@@ -15,36 +15,14 @@ const route = useRoute()
         'justify-center': props.iconOnly,
         'justify-start': !props.iconOnly,
         'tooltip tooltip-right': props.iconOnly,
-    }" class="flex items-center gap-x-4 p-4 hover:bg-base-300 cursor-pointer flex-nowrap" :data-tip="props.label">
+    }" class="flex items-center gap-x-4 p-4 hover:bg-base-300 cursor-pointer flex-nowrap" :data-tip="props.label"
+        v-auto-animate>
 
         <Icon :name="props.icon" size="24" />
 
-        <Transition name="grow">
-            <span v-if="!props.iconOnly">
-                {{ props.label }}
-            </span>
-        </Transition>
+        <span v-if="!props.iconOnly" v-auto-animate>
+            {{ props.label }}
+        </span>
+
     </NuxtLink>
 </template>
-
-<style scoped>
-.grow-enter-active {
-    animation: grow 0.1s;
-}
-
-.grow-leave-active {
-    animation: grow 0.1s reverse;
-}
-
-@keyframes grow {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-</style>

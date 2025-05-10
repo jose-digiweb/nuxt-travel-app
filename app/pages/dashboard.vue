@@ -2,13 +2,13 @@
 const isSidebarCollapsed = ref(false)
 
 onMounted(() => {
-  isSidebarCollapsed.value = localStorage.getItem('isSidebarCollapsed') === 'true'
+    isSidebarCollapsed.value = localStorage.getItem('isSidebarCollapsed') === 'true'
 })
 
 const toggleSidebar = () => {
-  isSidebarCollapsed.value = !isSidebarCollapsed.value
+    isSidebarCollapsed.value = !isSidebarCollapsed.value
 
-  localStorage.setItem('isSidebarCollapsed', isSidebarCollapsed.value.toString())
+    localStorage.setItem('isSidebarCollapsed', isSidebarCollapsed.value.toString())
 }
 </script>
 
@@ -17,7 +17,7 @@ const toggleSidebar = () => {
         <div :class="{
             'w-64': !isSidebarCollapsed,
             'w-16': isSidebarCollapsed
-        }" class="bg-base-200 transition-all duration-300 ease-in-out">
+        }" class="bg-base-200" v-auto-animate>
             <div class="flex justify-end p-2">
                 <button class="btn btn-ghost btn-square" @click="toggleSidebar">
                     <Icon name="tabler:chevron-left" size="42" :class="{
@@ -38,6 +38,8 @@ const toggleSidebar = () => {
             </div>
         </div>
 
-        <div class="flex-1"></div>
+        <div class="flex-1">
+            <NuxtPage />
+        </div>
     </div>
 </template>

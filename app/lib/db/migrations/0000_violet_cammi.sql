@@ -5,8 +5,8 @@ CREATE TABLE `location` (
 	`description` text NOT NULL,
 	`lat` real NOT NULL,
 	`long` real NOT NULL,
-	`create_app` integer NOT NULL,
-	`update_at` integer NOT NULL,
+	`created_at` integer NOT NULL,
+	`updated_at` integer NOT NULL,
 	`user_id` integer NOT NULL,
 	FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON UPDATE no action ON DELETE no action
 );
